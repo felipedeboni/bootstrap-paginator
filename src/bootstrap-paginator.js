@@ -458,7 +458,7 @@
 
             if (this.options.centerCurrentPage && this.numberOfPages % 2 !== 0) {
                 padWith = (this.numberOfPages - 1) / 2;
-                if (this.currentPage - padWith <= 0) {
+                if (this.currentPage - padWith <= 0 || (this.totalPages - this.numberOfPages + 1) <= 0) {
                     pageStart = 1;
                 } else if (this.currentPage + padWith > this.totalPages) {
                     pageStart = this.totalPages - this.numberOfPages + 1;
